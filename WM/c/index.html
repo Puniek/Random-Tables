@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +67,7 @@
                     <p  onclick="cc()">
                         <span class="bg"></span>
                         <span class="base"></span>
-                        <span class="text" id="trad_texte_2" title="Calcule la distance entre les différents points">Calculer la distance</span>
+                        <span class="text" id="trad_texte_2" title="Calculate the distance between different points">Calculate distance</span>
                     </p>
                 </a>
                 
@@ -76,7 +75,7 @@
                     <p>
                         <span class="bg"></span>
                         <span class="base"></span>
-                        <span class="text" title="Retour au menu">Retour au menu</span></span>
+                        <span class="text" title="Back to menu">Back to menu</span></span>
                     </p>
                 </a>
             </div>
@@ -92,21 +91,21 @@
     <div class="modal-content">
         <div class="modal-header">
         <span class="close" onclick="FermerModal()">&times;</span>
-        <h2>Détails</h2>
+        <h2>Details</h2>
         <hr>
         </div>
         <div class="modal-body">
-            <p>Distance par trajet:</p>
+            <p>Distance per trip:</p>
             <div id="modal-body"></div>
             <div id="modal-fin"></div>
         </div>
         <div class="modal-footer">
-            <img title="Afficher des exemples de modificateurs" alt="fermer" onclick="modificateur_aff(this)" style="transform: rotate(180deg);margin:auto;" src="https://www.linuxtricks.fr/upload/to_top.png"/>
+            <img title="Show modifier examples" alt="close" onclick="modificateur_aff(this)" style="transform: rotate(180deg);margin:auto;" src="https://www.linuxtricks.fr/upload/to_top.png"/>
             <div id='modificateur' class="content">
-                <table > <tr> <th>Type</th> <th>Nom</th> <th>Valeur</th> </tr> <tr> <td>Terrestre</td> <td>Route de montagne</td> <td>-75%</td> </tr> <tr> <td>Terrestre</td> <td>Hors piste</td> <td>-50%</td> </tr> <tr> <td>Terrestre</td> <td>Route mal entretenue</td> <td>-25%</td> </tr> <tr> <td>Terrestre</td> <td>Chargé</td> <td>-20%</td> </tr> <tr> <td>Terrestre</td> <td>Météo défavorable</td> <td>-20%</td> </tr> <tr> <td>Terrestre</td> <td>Route inconnue</td> <td>-20%</td> </tr> <tr> <td>Terrestre</td> <td>Route très fréquentée</td> <td>-10%</td> </tr> <tr> <td>Terrestre</td> <td>Route pratiquée</td> <td>+10%</td> </tr> <tr> <td>Terrestre</td> <td>Route pavée</td> <td>+20%</td> </tr> <tr> <td>Navigation</td> <td>Contre-vent</td> <td>-50%</td> </tr> <tr> <td>Navigation</td> <td>Météo défavorable</td> <td>-25%</td> </tr> <tr> <td>Navigation</td> <td>Vent bénéfique</td> <td>+50%</td> </tr></table>
+                <table > <tr> <th>Type</th> <th>Name</th> <th>Value</th> </tr> <tr> <td>Land</td> <td>Mountain road</td> <td>-75%</td> </tr> <tr> <td>Land</td> <td>Off-road</td> <td>-50%</td> </tr> <tr> <td>Land</td> <td>Poorly maintained road</td> <td>-25%</td> </tr> <tr> <td>Land</td> <td>Loaded</td> <td>-20%</td> </tr> <tr> <td>Land</td> <td>Unfavorable weather</td> <td>-20%</td> </tr> <tr> <td>Land</td> <td>Unknown route</td> <td>-20%</td> </tr> <tr> <td>Land</td> <td>Heavily traveled road</td> <td>-10%</td> </tr> <tr> <td>Land</td> <td>Well-used road</td> <td>+10%</td> </tr> <tr> <td>Land</td> <td>Paved road</td> <td>+20%</td> </tr> <tr> <td>Navigation</td> <td>Headwind</td> <td>-50%</td> </tr> <tr> <td>Navigation</td> <td>Unfavorable weather</td> <td>-25%</td> </tr> <tr> <td>Navigation</td> <td>Favorable wind</td> <td>+50%</td> </tr></table>
             </div>
             <div>
-                <b>Ajouter un modificateur:</b>
+                <b>Add a modifier:</b>
                 <input type="number" id="modif_temps" onchange="ModifTrajet(this.value)">
                 <div id="R_mt"></div>
             </div>
@@ -121,7 +120,7 @@
 
     var map = L.map('map', {zoomControl: false}).setView([0, 0], 3);
 		
-    L.control.zoom({zoomInTitle:'Zoomer',zoomOutTitle:'Dézoomer'}).addTo(map);
+    L.control.zoom({zoomInTitle:'Zoom in',zoomOutTitle:'Zoom out'}).addTo(map);
     
     
     L.tileLayer('map/{z}/{x}/{y}.png', {

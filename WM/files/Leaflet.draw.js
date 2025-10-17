@@ -85,19 +85,19 @@ L.drawLocal = {
 			// #TODO: this should be reorganized where actions are nested in actions
 			// ex: actions.undo  or actions.cancel
 			actions: {
-				title: 'Annuler le tracé',
-				text: 'Annuler'
+				title: 'Cancel drawing',
+				text: 'Cancel'
 			},
 			finish: {
-				title: 'Finir le tracé',
-				text: 'Finir'
+				title: 'Finish drawing',
+				text: 'Finish'
 			},
 			undo: {
-				title: 'Supprimer le dernier point',
-				text: 'Supprimer le dernier point'
+				title: 'Delete last point',
+				text: 'Delete last point'
 			},
 			buttons: {
-				polyline: 'Dessiner une route',
+				polyline: 'Draw a route',
 				polygon: 'Draw a polygon',
 				rectangle: 'Draw a rectangle',
 				circle: 'Draw a circle',
@@ -130,11 +130,11 @@ L.drawLocal = {
 				}
 			},
 			polyline: {
-				error: '<strong>Erreur:</strong> les arrêtes ne peuvent pas se croiser!',
+				error: '<strong>Error:</strong> edges cannot cross!',
 				tooltip: {
-					start: 'Clickez sur la carte pour débuter le tracé.',
-					cont: 'Clickez encore pour continuer le tracé.',
-					end: 'Click droit pour arrêter le tracé.'
+					start: 'Click on the map to start drawing.',
+					cont: 'Click again to continue drawing.',
+					end: 'Right-click to stop drawing.'
 				}
 			},
 			rectangle: {
@@ -153,35 +153,35 @@ L.drawLocal = {
 		toolbar: {
 			actions: {
 				save: {
-					title: 'Sauvegarder les changements',
-					text: 'Sauvegarder'
+					title: 'Save changes',
+					text: 'Save'
 				},
 				cancel: {
-					title: 'Annuler l\'édition',
-					text: 'Annuler'
+					title: 'Cancel editing',
+					text: 'Cancel'
 				},
 				clearAll: {
-					title: 'Nettoyer le tracé',
-					text: 'Nettoyer'
+					title: 'Clear drawing',
+					text: 'Clear'
 				}
 			},
 			buttons: {
-				edit: 'Editer le tracé',
-				editDisabled: 'Aucun tracé à éditer',
-				remove: 'Supprimer le tracé',
-				removeDisabled: 'Pas de tracé à supprimer'
+				edit: 'Edit drawing',
+				editDisabled: 'No drawing to edit',
+				remove: 'Delete drawing',
+				removeDisabled: 'No drawing to delete'
 			}
 		},
 		handlers: {
 			edit: {
 				tooltip: {
-					text: 'Faites glisser pour modifier les entités.',
-					subtext: 'Cliquez sur Annuler pour annuler les modifications.'
+					text: 'Drag handles to edit features.',
+					subtext: 'Click Cancel to undo changes.'
 				}
 			},
 			remove: {
 				tooltip: {
-					text: 'Cliquez sur Nettoyer pour supprimer le tracé.'
+					text: 'Click Clear to delete the drawing.'
 				}
 			}
 		}
